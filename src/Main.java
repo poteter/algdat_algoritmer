@@ -45,7 +45,7 @@ public class Main {
     }
 
     public static ArrayList<Integer> readIntFile(){
-        String filePath = "E:\\skole\\semester2\\algdat\\sample_Data\\large_data_set.txt";
+        String filePath = "dataSets/large_data_set.txt";
         ArrayList<Integer> resultArray = new ArrayList<>();
         try{
             FileReader fileReader = new FileReader(filePath);

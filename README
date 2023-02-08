@@ -1,0 +1,10 @@
+Algorithms:
+    - Sorting
+        - BubbleSort
+
+    - Searching
+        - BinarySort
+        - BinarySort with Recursion
+
+State of program:
+Main runs check on execution speed of BinarySort and BinarySortRecursion
