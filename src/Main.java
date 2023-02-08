@@ -2,6 +2,7 @@ import java.io.FileReader;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Objects;
 import java.util.Scanner;
 
 import static algorithms.search.binarysearch.BinarySearchRecursive.rank;
@@ -9,8 +10,7 @@ import static algorithms.search.binarysearch.BinarySearch.rank;
 
 public class Main {
     public static void main(String[] args) {
-        Integer[] largeIntArray;
-        largeIntArray = readIntFile().toArray(new Integer[0]);
+        Integer[] largeIntArray = Objects.requireNonNull(readIntFile()).toArray(new Integer[0]);
         Arrays.sort(largeIntArray);
 
         for (int i = 0; i<10; i++){
