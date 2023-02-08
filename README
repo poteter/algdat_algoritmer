@@ -8,3 +8,4 @@ Algorithms:
 
 State of program:
 Main runs check on execution speed of BinarySort and BinarySortRecursion
+Test classes run rudimentary tests on algorithms
