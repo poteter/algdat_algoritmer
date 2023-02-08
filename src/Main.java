@@ -6,7 +6,6 @@ import java.util.Scanner;
 
 import static algorithms.search.binarysearch.BinarySearchRecursive.rank;
 import static algorithms.search.binarysearch.BinarySearch.rank;
-import static algorithms.sort.bubblesort.BubbleSort.bubble;
 
 public class Main {
     public static void main(String[] args) {
@@ -18,13 +17,13 @@ public class Main {
             long startTimeRecursion = System.nanoTime();
             System.out.println("\nKey   : " + 6583 +  "\nIndex : " + rank(largeIntArray, 6583));
             long endTimeRecursion = System.nanoTime();
-            long elapsedTimeRecursion = (endTimeRecursion - startTimeRecursion);
+            long elapsedTimeRecursion = (endTimeRecursion - startTimeRecursion) / 1000000; // milliseconds
             System.out.println("BinarySearchRecursion execution time : " + elapsedTimeRecursion);
 
             long startTime = System.nanoTime();
             runBinary(6583, largeIntArray);
             long endTime = System.nanoTime();
-            long elapsedTime = (endTime - startTime);
+            long elapsedTime = (endTime - startTime) / 1000000; // milliseconds
             System.out.println("BinarySearch execution time : " + elapsedTime);
             System.out.println();
         }
@@ -32,16 +31,6 @@ public class Main {
 
     public static void runBinary(Integer k, Integer[] input){
         System.out.println("\nKey   : " + k +  "\nIndex : " + rank(k, input));
-    }
-
-    public static int[] runBubble(){
-        int[] input = {22,11,43,23,56,87,765,432,1,23,21,4,2,5,7,8,9,4,2,21,32,43,1,13,14,88};
-
-        for (int i : bubble(input)){
-            System.out.print(i + " ");
-        }
-
-        return input;
     }
 
     public static ArrayList<Integer> readIntFile(){
