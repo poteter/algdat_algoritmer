@@ -7,23 +7,34 @@ import java.util.Scanner;
 
 import static algorithms.search.binarysearch.BinarySearchRecursive.rank;
 import static algorithms.search.binarysearch.BinarySearch.rank;
+import static array.ArrayAdd.add;
+import static array.ArrayAdd.addAtLocation;
 
 public class Main {
     public static void main(String[] args) {
+        int[] testArray = {1,2,3,5,6,7,8,9};
+        //int[] newArray = add(9, testArray);
+        int[] newArray = addAtLocation(4, 3, testArray);
+        for(int i = 0; i < newArray.length; i++){
+            System.out.print(newArray[i] + " ");
+        }
+    }
+
+    public static void speedTest(){
         Integer[] largeIntArray = Objects.requireNonNull(readIntFile()).toArray(new Integer[0]);
         Arrays.sort(largeIntArray);
 
-        for (int i = 0; i<10; i++){
+        for (int i = 0; i<10; i++) {
             long startTimeRecursion = System.nanoTime();
-            System.out.println("\nKey   : " + 6583 +  "\nIndex : " + rank(largeIntArray, 6583));
+            System.out.println("\nKey   : " + 6583 + "\nIndex : " + rank(largeIntArray, 6583));
             long endTimeRecursion = System.nanoTime();
-            long elapsedTimeRecursion = (endTimeRecursion - startTimeRecursion) / 1000000; // milliseconds
+            long elapsedTimeRecursion = (endTimeRecursion - startTimeRecursion); // milliseconds
             System.out.println("BinarySearchRecursion execution time : " + elapsedTimeRecursion);
 
             long startTime = System.nanoTime();
             runBinary(6583, largeIntArray);
             long endTime = System.nanoTime();
-            long elapsedTime = (endTime - startTime) / 1000000; // milliseconds
+            long elapsedTime = (endTime - startTime); // milliseconds
             System.out.println("BinarySearch execution time : " + elapsedTime);
             System.out.println();
         }
