@@ -2,22 +2,18 @@ package algorithms.sort.selectionsort;
 public class SelectionSort{
 
     public static int[] selection(int[] input){
-        for (int i = 0; i < input.length; i++){
-            int smallest = input[i];
-            System.out.print(smallest + " ");
-            for (int j = i; j < input.length; j++){
-                if (smallest > input[j]){
-                    smallest = j;
+        int n = input.length;
+        for (int i = 0; i < n-1; i++){
+            int min = i;
+            for(int j = i+1; j < n; j++){
+                if(input[j] < input[min]){
+                    min = j;
                 }
             }
-            int a = input[smallest];
-            int b = input[i];
-            System.out.println(a);
-            System.out.println(b);
-            input[i] = a;
-            input[smallest] = b;
+            int temp = input[min];
+            input[min] = input[i];
+            input[i] = temp;
         }
-        System.out.println();
         return input;
     }
 }
