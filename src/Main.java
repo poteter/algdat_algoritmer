@@ -10,6 +10,8 @@ import static algorithms.search.binarysearch.BinarySearch.rank;
 import static algorithms.sort.selectionsort.SelectionSort.selection;
 import static array.ArrayDelete.deleteAtLocation;
 
+import array.arraylist.*;
+
 public class Main {
     public static void main(String[] args) {
         int[] testArray = {1,2,3,5,6,7,8,9};
@@ -23,9 +25,18 @@ public class Main {
         //for(int i = 0; i < newArray.length; i++){
         //    System.out.print(newArray[i] + " ");
         //}
-        for(int i : selection(testArrayRnd)){
-            System.out.print(i + " ");
+        //for(int i : selection(testArrayRnd)){
+        //    System.out.print(i + " ");
+        //}
+        array.arraylist.ArrayList arrayList = new array.arraylist.ArrayList();
+        arrayList.add(12);
+        arrayList.add(3);
+        arrayList.add(2);
+        arrayList.add(12334);
+        for (int i : arrayList.returnArray()){
+            System.out.println(i);
         }
+
     }
 
     public static void speedTest(){
