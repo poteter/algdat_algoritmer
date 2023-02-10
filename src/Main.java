@@ -8,6 +8,7 @@ import java.util.Scanner;
 import static algorithms.search.binarysearch.BinarySearchRecursive.rank;
 import static algorithms.search.binarysearch.BinarySearch.rank;
 import static array.ArrayAdd.*;
+import static array.ArrayDelete.*;
 
 public class Main {
     public static void main(String[] args) {
