@@ -7,13 +7,13 @@ import java.util.Scanner;
 
 import static algorithms.search.binarysearch.BinarySearchRecursive.rank;
 import static algorithms.search.binarysearch.BinarySearch.rank;
-import static array.ArrayAdd.add;
-import static array.ArrayAdd.addAtLocation;
+import static array.ArrayAdd.*;
 
 public class Main {
     public static void main(String[] args) {
         int[] testArray = {1,2,3,5,6,7,8,9};
-        //int[] newArray = add(9, testArray);
+        //int[] newArray = addStart(9, testArray);
+        //int[] newArray = addEnd(9, testArray);
         int[] newArray = addAtLocation(4, 3, testArray);
         for(int i = 0; i < newArray.length; i++){
             System.out.print(newArray[i] + " ");

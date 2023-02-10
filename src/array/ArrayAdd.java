@@ -1,11 +1,20 @@
 package array;
 public class ArrayAdd {
-    public static int[] add(int a, int[] old){
+    public static int[] addEnd(int a, int[] old){
         int[] newArray = new int[old.length + 1];
-        for (int i = 1; i < old.length; i++){
+        for (int i = 0; i < old.length; i++){
             newArray[i] = old[i];
         }
         newArray[newArray.length - 1] = a;
+        return newArray;
+    }
+
+    public static int[] addStart( int a, int[] old){
+        int[] newArray = new int[old.length + 1];
+        for (int i = 1; i < newArray.length; i++){
+            newArray[i] = old[i-1];
+        }
+        newArray[0] = a;
         return newArray;
     }
 
