@@ -4,13 +4,12 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Objects;
 import java.util.Scanner;
+import array.arraylist.*;
 
 import static algorithms.search.binarysearch.BinarySearchRecursive.rank;
 import static algorithms.search.binarysearch.BinarySearch.rank;
 import static algorithms.sort.selectionsort.SelectionSort.selection;
 import static array.ArrayDelete.deleteAtLocation;
-
-import array.arraylist.*;
 
 public class Main {
     public static void main(String[] args) {
@@ -28,7 +27,7 @@ public class Main {
         //for(int i : selection(testArrayRnd)){
         //    System.out.print(i + " ");
         //}
-        array.arraylist.ArrayList arrayList = new array.arraylist.ArrayList();
+        OArrayList arrayList = new OArrayList();
         arrayList.add(12);
         arrayList.add(3);
         arrayList.add(2);

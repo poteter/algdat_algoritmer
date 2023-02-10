@@ -1,6 +1,6 @@
 package array.arraylist;
 
-public class ArrayList {
+public class OArrayList{
     int size = 0;
     int[] array = new int[size];
 
