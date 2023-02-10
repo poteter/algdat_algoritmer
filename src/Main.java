@@ -9,7 +9,8 @@ import array.arraylist.*;
 import static algorithms.search.binarysearch.BinarySearchRecursive.rank;
 import static algorithms.search.binarysearch.BinarySearch.rank;
 import static algorithms.sort.selectionsort.SelectionSort.selection;
-import static array.ArrayDelete.deleteAtLocation;
+import static array.ArrayDelete.*;
+import static array.ArrayAdd.*;
 
 public class Main {
     public static void main(String[] args) {
@@ -28,6 +29,7 @@ public class Main {
         //    System.out.print(i + " ");
         //}
         OArrayList arrayList = new OArrayList();
+
         arrayList.add(12);
         arrayList.add(3);
         arrayList.add(2);
@@ -36,6 +38,17 @@ public class Main {
             System.out.println(i);
         }
 
+        System.out.println();
+        arrayList.remove(arrayList.indexOf(3));
+        for (int i : arrayList.returnArray()){
+            System.out.println(i);
+        }
+
+        System.out.println();
+        arrayList.add(2112);
+        for (int i : arrayList.returnArray()){
+            System.out.println(i);
+        }
     }
 
     public static void speedTest(){
