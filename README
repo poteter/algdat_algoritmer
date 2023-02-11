@@ -6,6 +6,16 @@ Algorithms:
         - BinarySort
         - BinarySort with Recursion
 
+Data structures:
+    - array
+        - arraylist
+
+    - stack
+        - int stack
+
 State of program:
 Main runs check on execution speed of BinarySort and BinarySortRecursion
 Test classes run rudimentary tests on algorithms
+
+Array package contains array methods and an early arraylist
+Stack package contains a functioning stack of type int using array
