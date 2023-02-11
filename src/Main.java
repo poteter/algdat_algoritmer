@@ -5,6 +5,7 @@ import java.util.Arrays;
 import java.util.Objects;
 import java.util.Scanner;
 import array.arraylist.*;
+import stack.*;
 
 import static algorithms.search.binarysearch.BinarySearchRecursive.rank;
 import static algorithms.search.binarysearch.BinarySearch.rank;
@@ -14,6 +15,29 @@ import static array.ArrayAdd.*;
 
 public class Main {
     public static void main(String[] args) {
+        Stack stack = new Stack(5);
+        System.out.println("is stack empty : " + stack.empty());
+        stack.push(2);
+        stack.push(3);
+        stack.push(4);
+        System.out.println("top : " + stack.top());
+        System.out.println("size of stack : " + stack.size());
+        System.out.println("pop : " + stack.pop());
+        System.out.println("size of stack : " + stack.size());
+        System.out.println("top : " + stack.top());
+        stack.push(6);
+        System.out.println("top : " + stack.top());
+        System.out.println("is stack empty : " + stack.empty());
+        System.out.println("size of stack : " + stack.size());
+        stack.push(2);
+        System.out.println("push 3");
+        stack.push(3);
+        System.out.println("size : " + stack.size());
+        System.out.println("push 6");
+        stack.push(6);
+    }
+
+    public void safe(){
         int[] testArray = {1,2,3,5,6,7,8,9};
         int[] testArrayRnd = {5,3,8,1,3,2,9};
         //int[] newArray = addStart(9, testArray);
