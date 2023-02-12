@@ -15,17 +15,29 @@ import static array.ArrayAdd.*;
 
 public class Main {
     public static void main(String[] args) {
+        safe2();
+    }
+
+    public static void safe2(){
         Stack stack = new Stack(5);
         System.out.println("is stack empty : " + stack.empty());
-        stack.push(2);
-        stack.push(3);
-        stack.push(4);
+        stack.push(22);
+        stack.push(33);
+        stack.push(44);
+        for (int i : stack.stack()){
+            System.out.print(i + " ");
+        }
+        System.out.println();
         System.out.println("top : " + stack.top());
         System.out.println("size of stack : " + stack.size());
         System.out.println("pop : " + stack.pop());
         System.out.println("size of stack : " + stack.size());
         System.out.println("top : " + stack.top());
         stack.push(6);
+        for (int i : stack.stack()){
+            System.out.print(i + " ");
+        }
+        System.out.println();
         System.out.println("top : " + stack.top());
         System.out.println("is stack empty : " + stack.empty());
         System.out.println("size of stack : " + stack.size());
@@ -35,9 +47,12 @@ public class Main {
         System.out.println("size : " + stack.size());
         System.out.println("push 6");
         stack.push(6);
+        for (int i : stack.stack()){
+            System.out.print(i + " ");
+        }
     }
 
-    public void safe(){
+    public void safe1(){
         int[] testArray = {1,2,3,5,6,7,8,9};
         int[] testArrayRnd = {5,3,8,1,3,2,9};
         //int[] newArray = addStart(9, testArray);

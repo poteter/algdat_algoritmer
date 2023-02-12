@@ -51,4 +51,12 @@ public class Stack {
         }
         return -1;
     }
+
+    public int[] stack(){
+        int[] stack = new int[top+1];
+        for(int i = 0; i < top+1; i++){
+            stack[i] = intStack[i];
+        }
+        return stack;
+    }
 }
