@@ -1,11 +1,11 @@
 import java.io.FileReader;
 import java.io.IOException;
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.Objects;
-import java.util.Scanner;
+import java.util.*;
+
+import algorithms.sort.bubblesort.BubbleSort;
 import array.arraylist.*;
 import stack.*;
+import stack.Stack;
 
 import static algorithms.search.binarysearch.BinarySearchRecursive.rank;
 import static algorithms.search.binarysearch.BinarySearch.rank;
@@ -15,7 +15,12 @@ import static array.ArrayAdd.*;
 
 public class Main {
     public static void main(String[] args) {
-        safe2();
+        int[] temp = {3,2,4,3,5,4,6,1,7,12};
+        BubbleSort b = new BubbleSort();
+        for (int i : b.bubble(temp)){
+            System.out.print(i + " ");
+        }
+        System.out.println("\n" + 37%4);
     }
 
     public static void safe2(){

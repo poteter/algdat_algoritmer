@@ -1,6 +1,7 @@
 Algorithms:
     - Sorting
         - BubbleSort
+	- insertionSort
 
     - Searching
         - BinarySort
